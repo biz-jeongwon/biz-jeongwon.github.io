@@ -110,6 +110,7 @@ Detection은 공격자의 행동을 식별하기 위한 방법입니다. 이는 
 ---
 ## Differences
 VS Cyber Kill Chain : 공격의 단계를 선형적으로 설명하는 것에 반해 MITRE ATT&CK은 공격의 단계별 구체적 기법을 강조하였습니다.
+
 VS Diamond Model: 공격의 4가지 요소(공격자, 인프라, 능력, 피해자)를 강조한 것에 반해 MITRE ATT&CK은 공격자의 실행 방법에 초점을 맞추었습니다.
 
  
