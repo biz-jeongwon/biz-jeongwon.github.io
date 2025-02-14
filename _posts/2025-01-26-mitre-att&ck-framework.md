@@ -55,7 +55,49 @@ Detection은 공격자의 행동을 식별하기 위한 방법입니다. 이는 
 `DS0015 : Application Log Content` : Spear Phishing Attachment를 방어하기 위해 DKIM+SPF와 이메일 헤더 분석을 통해 발신자 스푸핑을 탐지하고, Antivirus/Antimalware로 악성 첨부 파일을 스캔하여 차단합니다. 또한, Microsoft Office 등 생산성 소프트웨어에서 의심스러운 하위 프로세스 생성 여부를 모니터링해 악성 코드 실행을 조기에 탐지하고 방어할 수 있습니다.
 
 ---
+## ATT&CK Features
+1. 플랫폼(Enterprise, Mobile, ICS) 별 구분을 수행하였습니다.
+  - Enterprise : 가장 일반적으로 공격 대상이 되는 환경입니다. Windows, Linux, MacOS, Cloud 환경이 그 예시입니다.
+    - Windows
+      - T1059.001: Command and Scripting Interpreter (PowerShell)
+      - T1112: Modify Registry
+      - T1055: Process Injection (DLL Injection)
+      - T1546.003: Event Triggered Execution (Windows Management Instrumentation)
+    - Linux
+      - T1059.004: Command and Scripting Interpreter (Unix Shell)
+      - T1053.003: Scheduled Task/Job (Cron)
+      - T1548.001: Abuse Elevation Control Mechanism (Setuid and Setgid)
+      - T1064: Scripting
+    - MacOS
+      - T1546.004: Event Triggered Execution (Launch Agent)
+      - T1553.002: Subvert Trust Controls (Gatekeeper Bypass)
+      - T1547.011: Boot or Logon Autostart Execution (Plist Modification)
+      - T1059.004: Command and Scripting Interpreter (Unix Shell)
+    - Cloud
+      - T1538: Cloud Service Discovery
+      - T1552.002: Unsecured Credentials (Cloud Instance Metadata API)
+      - T1078.004: Valid Accounts (Azure AD)
+      - T1611: Escape to Host (Kubernetes Exploitation)
+    
+  - Mobile : 모바일 기기는 개인 및 기업 데이터에 접근할 수 있는 주요 매개체로, 공격 대상이 되고 있습니다. Android는 오픈 소스 기반으로 취약점이 더 자주 발견되며, iOS는 폐쇄적 생태계로 상대적으로 안전하지만 제로데이 공격에 취약합니다.
+    - Android
+      - T1404: Exploit Public-Facing Application (Malicious App Installation)
+      - T1620: Abuse Elevation Control Mechanism (Rooting)
+      - T1433: Access Location Data
+      - T1430: Exploitation for Privilege Escalation
+    - iOS
+      - T1406: Exploit Public-Facing Application (Jailbreaking)
+      - T1553.003: Subvert Trust Controls (Code Signing Bypass)
+      - T1546.004: Event Triggered Execution (Launch Agent)
+      - T1430: Exploitation for Privilege Escalation
 
+  - ICS : ICS와 OT(Operational Technology) 환경은 물리적 프로세스를 제어하는 시스템으로, 공격 시 물리적 피해가 발생할 수 있습니다. 이 환경은 실시간 운영이 중요하며, 패치가 어렵고 오래된 시스템이 많아 취약합니다.
+    - T0889: Manipulation of Control (PLC Manipulation)
+    - T0859: Exploitation of Remote Services (SCADA Exploitation)
+    - T0866: Protocol Manipulation (Modbus/DNP3 Spoofing)
+    - T0883: Denial of Service (Physical Process Disruption)
+    
+2. 실용성을 추구합니다.
  
 
  
