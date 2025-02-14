@@ -56,8 +56,9 @@ Detection은 공격자의 행동을 식별하기 위한 방법입니다. 이는 
 
 ---
 ## ATT&CK Features
-1. 플랫폼(Enterprise, Mobile, ICS) 별 구분을 수행하였습니다.
-  - Enterprise : 가장 일반적으로 공격 대상이 되는 환경입니다. Windows, Linux, MacOS, Cloud 환경이 그 예시입니다.
+
+### 플랫폼(Enterprise, Mobile, ICS) 별 구분
+-  Enterprise : 가장 일반적으로 공격 대상이 되는 환경입니다. Windows, Linux, MacOS, Cloud 환경이 그 예시입니다.
     - Windows
       - T1059.001: Command and Scripting Interpreter (PowerShell)
       - T1112: Modify Registry
@@ -97,7 +98,20 @@ Detection은 공격자의 행동을 식별하기 위한 방법입니다. 이는 
     - T0866: Protocol Manipulation (Modbus/DNP3 Spoofing)
     - T0883: Denial of Service (Physical Process Disruption)
     
-2. 실용성을 추구합니다.
+### 실용성
+- 공격 탐지: 공격자의 행동 패턴을 기반으로 탐지 규칙을 개발.
+- 방어 전략 수립: 조직의 방어 체계를 강화하기 위한 전략 수립.
+- 레드팀/블루팀 훈련: 공격 시뮬레이션을 통해 팀의 역량 강화.
+- 보안 솔루션 평가: MITRE의 공격 시뮬레이션(Evaluations)을 통해 보안 제품의 성능 검증.
+
+### 동적 업데이트
+실제 공격 사례를 기반으로 새로운 기법과 절차가 추가됩니다. 그리고 신흥 기술(클라우드, SaaS)과 최신 공격 기법을 반영하여 지속적으로 업데이트됩니다.
+
+---
+## Differences
+VS Cyber Kill Chain : 공격의 단계를 선형적으로 설명하는 것에 반해 MITRE ATT&CK은 공격의 단계별 구체적 기법을 강조하였습니다.
+VS Diamond Model: 공격의 4가지 요소(공격자, 인프라, 능력, 피해자)를 강조한 것에 반해 MITRE ATT&CK은 공격자의 실행 방법에 초점을 맞추었습니다.
+
  
 
  
