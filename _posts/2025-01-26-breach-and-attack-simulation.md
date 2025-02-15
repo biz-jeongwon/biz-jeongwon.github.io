@@ -45,7 +45,7 @@ python3 server.py --build
 
 ##### Caldera Server CLI
 
-![Desktop View](https://github.com/biz-jeongwon/biz-jeongwon.github.io/blob/main/_posts/img/breach-and-attack-simulation/caldera-cmd.png)
+![Desktop View](/posts/img/breach-and-attack-simulation/caldera-cmd.png)
 
 ##### Caldera Server GUI
 
