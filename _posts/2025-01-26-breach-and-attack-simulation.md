@@ -44,9 +44,11 @@ python3 server.py --build
 위 명령어를 사용하여 필요한 패키지 설치 진행
 
 ##### Caldera Server CLI
+
 ![Desktop View](/posts/img/breach-and-attack-simulation/caldera-cmd.png)
 
 ##### Caldera Server GUI
+
 ![Desktop View](/posts/img/breach-and-attack-simulation/caldera-web.png)
 
 ---
