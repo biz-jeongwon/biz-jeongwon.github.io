@@ -32,3 +32,17 @@ source caldera-env/bin/activate
 pip install -r requirements.txt
 ```
 
+##### Caldera 서버 실행
+```bash
+python3 server.py
+```
+
+##### ++ Trouble Shooting
+```bash
+python3 server.py --build
+```
+위 명령어를 사용하여 필요한 패키지 설치 진행
+
+---
+
+
