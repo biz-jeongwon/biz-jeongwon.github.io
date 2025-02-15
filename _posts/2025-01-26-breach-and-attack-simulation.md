@@ -43,6 +43,10 @@ python3 server.py --build
 ```
 위 명령어를 사용하여 필요한 패키지 설치 진행
 
+
+![Desktop View](/posts/20190808/mockup.png){: width="972" height="589" }
 ---
+
+
 
 
