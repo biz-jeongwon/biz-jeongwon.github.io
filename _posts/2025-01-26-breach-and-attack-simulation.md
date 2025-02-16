@@ -8,7 +8,7 @@ render_with_liquid: false
 ---
 ## BAS (Breach and Attack Simulation)
 
-###### `REF` : [MITRE](https://attack.mitre.org/)
+###### `REF` : [Caldera git](https://github.com/mitre/caldera)
 
 `BAS(Breach and Attack Simulation)`는 조직의 보안 상태를 평가하기 위해 실제 공격 시나리오를 시뮬레이
 션하는 기술입니다. 이를 통해 조직의 방어 체계가 실제 공격에 얼마나 효과적으로 대응할 수 있는지 테스트하고, 취약점을 식별하여 개선할 수 있습니다.
@@ -19,29 +19,23 @@ render_with_liquid: false
 
 ### To use Caldera
 
-##### Caldera 저장소 clone
+##### Environment Seeings
+```bash
+sudo apt update && sudo apt upgrade -y
+sudo apt install python-pip3 git docker.io docker-compose
+```
+
+##### Caldera Install
 ```bash
 git clone https://github.com/mitre/caldera.git --recursive
 cd caldera
-```
-
-##### 의존성 설치
-```bash
-python3 -m venv caldera-env
-source caldera-env/bin/activate
-pip install -r requirements.txt
-```
-
-##### Caldera 서버 실행
-```bash
-python3 server.py
+docker compose up -d
 ```
 
 ##### ++ Trouble Shooting
 ```bash
-python3 server.py --build
+docker build --no-cache -t caldera
 ```
-위 명령어를 사용하여 필요한 패키지 설치 진행
 
 ---
 
