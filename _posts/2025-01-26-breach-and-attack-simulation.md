@@ -22,14 +22,14 @@ render_with_liquid: false
 ##### Environment Seeings
 ```bash
 sudo apt update && sudo apt upgrade -y
-sudo apt install python-pip3 git docker.io docker-compose
+sudo apt install python3-pip git docker.io docker-compose
 ```
 
 ##### Caldera Install
 ```bash
 git clone https://github.com/mitre/caldera.git --recursive
 cd caldera
-docker compose up -d
+docker-compose up -d
 ```
 
 ##### ++ Trouble Shooting
