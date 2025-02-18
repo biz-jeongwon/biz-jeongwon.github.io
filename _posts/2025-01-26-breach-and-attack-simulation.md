@@ -17,24 +17,30 @@ render_with_liquid: false
 ## Caldera
 `Caldera`는 MITRE Corporation에서 개발한 오픈소스 자동화된 침해 시뮬레이션 플랫폼으로, 조직의 보안 방어 체계를 테스트하고 개선하기 위해 설계되었습니다. `Caldera`는 MITRE ATT&CK 프레임워크를 기반으로 하여 실제 공격자의 전술, 기술, 절차(TTPs)를 시뮬레이션함으로써 조직의 보안 취약점을 식별하고 대응 능력을 평가합니다.
 
-### To use Caldera
+### To use Caldera (in local WSL2)
 
 ##### Environment Seeings
 ```bash
-sudo apt update && sudo apt upgrade -y
-sudo apt install python3-pip git docker.io docker-compose
+sudo apt update
+sudo apt install git python3-pip
 ```
 
 ##### Caldera Install
 ```bash
 git clone https://github.com/mitre/caldera.git --recursive
 cd caldera
-docker-compose up -d
+
+python3 -m venv caldera-venv
+source caldera-venv/bin/activate
+pip install -r requirements.txt
+python3 server.py --insecure
 ```
 
 ##### ++ Trouble Shooting
 ```bash
-docker build --no-cache -t caldera
+git submodule init
+npm install
+npm run build
 ```
 
 ---
