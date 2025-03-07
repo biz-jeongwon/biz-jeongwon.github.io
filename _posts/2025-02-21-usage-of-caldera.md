@@ -32,9 +32,11 @@ Caldera Server가 Victim host에게 수행할 수 있는 공격 전술입니다.
 - `Campaigns/Agents`에서 Victim host를 생성합니다.
     - 저는 Sandcat을 사용하였고, Linux 환경의 Victim host를 택하였습니다.
     - `app.contact.http`의 IP 자리에 Caldera server의 IP를 넣어줍니다.
-    - 입력을 마친 후 하단 명령어를 Victim host의 Terminal에서 실행해줍니다.\
-
-- 
+    - 입력을 마친 후 하단 명령어를 Victim host의 Terminal에서 실행해줍니다.
+![image](assets/img/usage-of-caldera/operation_exec.png)
+- `Campaigns/Operation`에서 실행할 Attack Chain을 `Campaigns/Adversaries`에서 선택합니다.
+    - 예시로 생성되어있던 `Thief`를 실행해 보았습니다.
+ 
 
 
 
