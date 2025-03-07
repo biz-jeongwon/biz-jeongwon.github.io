@@ -14,25 +14,27 @@ render_with_liquid: false
 ## Overview
 
 ### Campaigns/Agents
-Victim host에게 공격 전술을 수행할 수 있는 Agent를 생성하고 관리합니다.
+Victim host를 생성하고 관리합니다.
 
 ### Campaigns/Abilities
-Agent가 Victim host에게 수행할 수 있는 공격 전술입니다.
+Caldera Server가 Victim host에게 수행할 수 있는 공격 전술입니다.
 
 ### Campaigns/Adversaries
 `Abilities`의 공격 전술을 Chaining할 수 있습니다.
 
 ### Campaigns/Operation
-`Adversaries`의 Attack Chain을 실행합니다.
+`Adversaries`의 Attack Chain을 Victim host에게 실행합니다.
 
 ---
 ## Attack Test
 
-### 1. Create Agent
+![image](assets/img/usage-of-caldera/agent_create.png)
+- `Campaigns/Agents`에서 Victim host를 생성합니다.
+    - 저는 Sandcat을 사용하였고, Linux 환경의 Victim host를 택하였습니다.
+    - `app.contact.http`의 IP 자리에 Caldera server의 IP를 넣어줍니다.
+    - 입력을 마친 후 하단 명령어를 Victim host의 Terminal에서 실행해줍니다.\
 
-### 2. Configure Adversaries
-
-### 3. Execute Operation
+- 
 
 
 
