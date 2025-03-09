@@ -7,3 +7,5 @@ tags: [writing]
 render_with_liquid: false
 ---
 ## Configure EDR with Wazuh, Sysmon, Sigma
+
+### Build Wazuh (with AWS)
