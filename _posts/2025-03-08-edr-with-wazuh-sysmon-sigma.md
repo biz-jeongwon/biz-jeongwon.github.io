@@ -67,6 +67,8 @@ sudo mkswap /swapfile
 sudo swapon /swapfile
 ```
 
+<br><br>
+
 ##### Install wazuh-server
 ###### `REF` : [Wazuh-server Install Guide](https://documentation.wazuh.com/current/installation-guide/wazuh-server/step-by-step.html)
 
@@ -125,6 +127,8 @@ systemctl enable wazuh-manager
 systemctl start wazuh-manager
 ```
 
+<br><br>
+
 ##### Install wazuh-dashboard
 ###### `REF` : [Wazuh-dashboard Install Guide](https://documentation.wazuh.com/current/installation-guide/wazuh-dashboard/step-by-step.html)
 
@@ -148,6 +152,8 @@ systemctl daemon-reload
 systemctl enable wazuh-dashboard
 systemctl start wazuh-dashboard
 ```
+
+<br><br>
 
 ##### Configure certificates
 
