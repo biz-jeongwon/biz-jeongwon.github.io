@@ -165,6 +165,7 @@ systemctl restart wazuh-indexer
 ### Connect Wazuh Server with Agent (with Sysmon)
 <br><br>
 ![image](assets/img/edr-with-wazuh-sysmon-sigma/deploy_agent.png)
+<br>
 Wazuh Dashboard에서 Deploy new agent를 통해 Endpoint Agent를 생성합니다.
 
 <br><br>
