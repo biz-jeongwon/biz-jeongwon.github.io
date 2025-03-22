@@ -10,7 +10,7 @@ render_with_liquid: false
 `REF` : [Red Raccoon - 레드팀 플레이북](https://www.xn--hy1b43d247a.com/basic-redteam/overview)  | [타쿠대디 - OSCP Guide](https://takudaddy.tistory.com/439#T3)
 <br><br><br>
 
-Phishing을 통한 피해자 호스트에 Sliver C2 서버 설치를 가정
+Phishing을 통한 피해자 호스트에 Sliver C2 서버 설치를 가정<br>
 [Sliver C2 Wiki](https://sliver.sh/docs?name=Getting+Started) | [NCSC Docs](https://www.ncsc.gov.uk/files/Advisory-further-TTPs-associated-with-SVR-cyber-actors.pdf)
 
 ```bash
