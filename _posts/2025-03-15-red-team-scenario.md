@@ -11,8 +11,7 @@ render_with_liquid: false
 <br><br><br>
 
 Phishing을 통한 피해자 호스트에 Sliver C2 서버 설치를 가정
-[Sliver C2 Wiki](https://sliver.sh/docs?name=Getting+Started)
-[NCSC Dosc](https://www.ncsc.gov.uk/files/Advisory-further-TTPs-associated-with-SVR-cyber-actors.pdf)
+[Sliver C2 Wiki](https://sliver.sh/docs?name=Getting+Started) | [NCSC Docs](https://www.ncsc.gov.uk/files/Advisory-further-TTPs-associated-with-SVR-cyber-actors.pdf)
 
 ```bash
 sudo apt update
