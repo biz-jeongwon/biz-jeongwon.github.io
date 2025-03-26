@@ -12,15 +12,15 @@ render_with_liquid: false
 - Defence Evasion : AI based Strategy switching with OpenCTI
 
 ## Plan
-0) 최신 공격 기법, 우회 기법 연구
-1) Sliver 초기 침투 -> Sliver를 통한 공격
-2) Caldera Agent 심고 -> Metasploit, Caldera Tatics로 공격
-3) 1, 2 혼합
-4) Havoc으로 난독화 및 공격 수행
-5) 3, 4 혼합
-6) OpenCTI에 AI를 적용해 공격 전략 분기 자동화
-7) 혼합된 커스텀 레드팀 프레임워크 개발
-8) 추가 C2 툴 혼합 및 AI 활용을 통한 고도화
+0) 최신 공격 기법, 우회 기법 연구<br>
+1) Sliver 초기 침투 -> Sliver를 통한 공격<br>
+2) Caldera Agent 심고 -> Metasploit, Caldera Tatics로 공격<br>
+3) 1, 2 혼합<br>
+4) Havoc으로 난독화 및 공격 수행<br>
+5) 3, 4 혼합<br>
+6) OpenCTI에 AI를 적용해 공격 전략 분기 자동화<br>
+7) 혼합된 커스텀 레드팀 프레임워크 개발<br>
+8) 추가 C2 툴 혼합 및 AI 활용을 통한 고도화<br>
 
 단계 별 수행 후 고도화 예정
 
