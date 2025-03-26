@@ -12,5 +12,12 @@ render_with_liquid: false
 ```bash
 sudo apt update
 curl https://sliver.sh/install|sudo bash
-```
 
+systemctl status sliver # 실행 확인
+systemctl start sliver # sliver 실행
+
+sliver
+```
+![image](assets/img/red-framework-sliver/activate_sliver.png)
+
+## How to Use Sliver
