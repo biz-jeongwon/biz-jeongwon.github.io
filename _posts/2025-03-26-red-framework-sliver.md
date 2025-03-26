@@ -18,6 +18,6 @@ systemctl start sliver # sliver 실행
 
 sliver
 ```
-![image](assets/img/red-framework-sliver/activate_sliver.png)
+![image](assets/img/red-framework-sliver/activate_sliver.png)<br><br><br>
 
 ## How to Use Sliver
