@@ -70,10 +70,11 @@ drwx------  root:root  snap            <dir>     Tue Mar 18 13:18:02 +0000 2025
 ```
 <br>
 
-Reverse Shell이 잘 연결됨을 확인할 수 있습니다.<br><br><br>
+Reverse Shell이 잘 연결됨을 확인할 수 있습니다.<br><br>
 
 #### Attack Simulation
 
 ```bash
 armory install all 
 ```
+기능이 대부분 windows 기반임...
