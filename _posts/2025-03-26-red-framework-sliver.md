@@ -42,7 +42,7 @@ sliver > sessions
 
  ID         Transport   Remote Address     Hostname         Username   Operating System   Health  
 ========== =========== ================== ================ ========== ================== =========
- 48df96c2   http(s)     X.X.X.X:41256   ip-172-31-45-3   root       linux/amd64        [ALIVE] 
+ 48df96c2   http(s)     X.X.X.X:41256     ip-172-31-45-3   root       linux/amd64        [ALIVE] 
 
 sliver > sessions -i 48df96c2
 
