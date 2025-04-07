@@ -23,7 +23,7 @@ render_with_liquid: false
 ##### Environment Seeings
 ```bash
 sudo apt update
-sudo apt install git python3-pip
+sudo apt install git python3-pip python3.12-venv
 ```
 
 ##### Caldera Install
@@ -52,7 +52,7 @@ npm run build
 ssh -i /path/to/your-key.pem ubuntu@your-instance-public-ip
 sudo su -
 sudo apt-get update
-sudo apt-get install -y git python3-pip
+sudo apt-get install -y git python3-pip python3.12-venv
 ```
 
 ##### Caldera Install
