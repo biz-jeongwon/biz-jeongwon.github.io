@@ -102,7 +102,7 @@ sudo cp ./sliver-client /usr/local/bin/sliver-client
 ```
 <br><br>
 
-### Sliver
+### Link Sliver Plugin for Caldera
 
 ```bash
 python3 -m venv sliver-env
