@@ -56,12 +56,53 @@ sudo systemctl status caldera.service
 <br><br>
 
 ### Sliver
+
+#### Install Sliver
 ```bash
 sudo apt update
-curl https://sliver.sh/install|sudo bash
-systemctl start sliver
-sliver
+sudo apt install -y git golang make zip
+
+echo 'export GOPATH=$HOME/go' >> ~/.bashrc
+echo 'export PATH=$PATH:$GOPATH/bin' >> ~/.bashrc
+source ~/.bashrc
+
+git clone https://github.com/BishopFox/sliver.git
+cd sliver
+
+make
 ```
+
+#### Configure Daemon
+```bash
+vi /etc/systemd/system/sliver.service
+
+#  [Unit]
+#  Description=Sliver C2 Server
+#  After=network.target
+
+#  [Service]
+#  Type=simple
+#  User=root
+#  WorkingDirectory=/root/PARASITE/sliver
+#  ExecStart=/root/PARASITE/sliver/sliver-server
+#  Restart=always
+
+#  [Install]
+#  WantedBy=multi-user.target
+
+sudo chmod 644 /etc/systemd/system/sliver.service
+sudo systemctl daemon-reexec
+sudo systemctl daemon-reload
+
+sudo systemctl enable sliver.service
+sudo systemctl start sliver.service
+
+sudo cp ./sliver-server /usr/local/bin/sliver-server
+sudo cp ./sliver-client /usr/local/bin/sliver-client
+```
+<br><br>
+
+### Sliver
 
 ```bash
 python3 -m venv sliver-env
