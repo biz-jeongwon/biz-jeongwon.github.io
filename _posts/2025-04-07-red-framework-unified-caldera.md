@@ -79,18 +79,16 @@ make
 ### Link Sliver Plugin for Caldera
 
 ```bash
-python3 -m venv sliver-env
-source sliver-env/bin/activate
+source caldera-venv/bin/activate
 pip install grpcio grpcio-tools
 
-python3 -m grpc_tools.protoc \
-  -I=protobuf \
-  --python_out=. \
-  --grpc_python_out=. \
-  protobuf/sliverpb/sliver.proto \
-  protobuf/rpcpb/services.proto \
-  protobuf/commonpb/common.proto
-
-mkdir -p ~/caldera/plugins/sliver_plugin/sliver_grpc
-cp sliverpb/*_pb2*.py rpcpb/*_pb2*.py commonpb/*_pb2*.py ~/caldera/plugins/sliver_plugin/sliver_grpc/
+python -m grpc_tools.protoc \
+  -I ~/PARASITE/sliver/protobuf \
+  --python_out=sliverpb \
+  --grpc_python_out=sliverpb \
+  ~/PARASITE/sliver/protobuf/sliverpb/sliver.proto \
+  ~/PARASITE/sliver/protobuf/commonpb/common.proto \
+  ~/PARASITE/sliver/protobuf/rpcpb/services.proto \
+  ~/PARASITE/sliver/protobuf/clientpb/client.proto \
+  ~/PARASITE/sliver/protobuf/dnspb/dns.proto
 ```
