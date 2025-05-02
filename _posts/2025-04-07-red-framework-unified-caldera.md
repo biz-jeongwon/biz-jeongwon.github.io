@@ -76,19 +76,22 @@ make
 
 <br><br>
 
-### Link Sliver Plugin for Caldera
+### Metasploit
 
+#### Install Metasploit
 ```bash
-source caldera-venv/bin/activate
-pip install grpcio grpcio-tools
+sudo apt update
+sudo apt install -y curl git ruby-full libsqlite3-dev libpcap-dev postgresql \
+  build-essential libreadline-dev libssl-dev zlib1g-dev libpq-dev libxml2-dev libxslt1-dev \
+  libyaml-dev autoconf libgmp-dev libgmp10 gawk
 
-python -m grpc_tools.protoc \
-  -I ~/PARASITE/sliver/protobuf \
-  --python_out=sliverpb \
-  --grpc_python_out=sliverpb \
-  ~/PARASITE/sliver/protobuf/sliverpb/sliver.proto \
-  ~/PARASITE/sliver/protobuf/commonpb/common.proto \
-  ~/PARASITE/sliver/protobuf/rpcpb/services.proto \
-  ~/PARASITE/sliver/protobuf/clientpb/client.proto \
-  ~/PARASITE/sliver/protobuf/dnspb/dns.proto
+cd /opt
+sudo git clone https://github.com/rapid7/metasploit-framework.git
+cd metasploit-framework
+
+sudo gem install bundler
+bundle config set --local without 'development test'
+bundle install
+
+./msfconsole
 ```
